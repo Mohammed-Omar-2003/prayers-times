@@ -1,13 +1,123 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+html {
+  direction: rtl;
+}
+.body {
+  background: url("../public/image/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.conatner {
+  margin-right: 10%;
+
+  width: 650px;
+  background: color #332a224e;
+  backdrop-filter: blur(10px);
+  padding: 25px 30px;
+  border-radius: 10px;
+  border: 1px solid #d7d7d74e;
+}
+.conatner .header {
+  padding-bottom: 40px;
+  border-bottom: 1px solid #d7d7d74e;
+  margin-bottom: 40px;
+}
+.conatner .top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.conatner .top select {
+  width: 250px;
+  border-radius: 5px;
+  outline: none;
+  background-color: #a54f3a;
+  padding: 2px 10px;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.conatner .top .date {
+  width: 250px;
+}
+.conatner .top .date h4 {
+  font-size: 26px;
+  color: #fff;
+}
+.time {
+  margin: auto;
+  border: 1px solid #d7d7d74e;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.time h4 {
+  color: #a54f3a;
+}
+.prayer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #a54f3a;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px 25px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+  border: 1px solid #d7d7d74e;
+}
+@media (max-width: 768px) {
+  body {
+    background-size: cover;
+    /* height: auto; */
+  }
+
+  .conatner {
+    width: 90%;
+    height: 95%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .conatner .top {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding-top: 30px;
+  }
+  .conatner .top .city {
+    width: 300px;
+  }
+
+  .conatner .top select,
+  .conatner .top .date h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .time {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .prayer {
+    padding: 10px 25px;
+    font-size: 18px;
+    text-align: center;
+  }
 }
